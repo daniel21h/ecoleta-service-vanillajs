@@ -2,7 +2,7 @@
 Ecoleta is a garbage collection service developed during the rocketseat Next Level Week.
 
 <div align=center>
-  <img src='../assets/icons/logo.svg' />
+  <img src='../assets/print.png' />
   <p>Available in https://ecoletaapp.netlify.app/.app/</p>
 </div>
 
