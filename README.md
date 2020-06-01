@@ -2,8 +2,8 @@
 Ecoleta is a garbage collection service developed during the rocketseat Next Level Week.
 
 <div align=center>
-  <img src='../assets/print.png' />
-  <p>Available in https://ecoletaapp.netlify.app/.app/</p>
+  <img src='./assets/print.png' />
+  <p>Available in https://ecoletaapp.netlify.app</p>
 </div>
 
 ## :information_source: How To Use
