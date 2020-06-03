@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="./styles/main.css">
   <link rel="stylesheet" href="./styles/create-point.css">
 
-  <link rel="stylesheet" href="./src/styles/responsive.css">
+  <link rel="stylesheet" href="./styles/responsive.css">
 </head>
 <body>
   
@@ -50,14 +50,16 @@
 
         <div class="field-group">
           <div class="field">
-            <label for="state">Número/Complemento</label>
+            <label for="state">Estado</label>
             <select name="uf" id="">
               <option value="">Selecione o estado</option>
             </select>
+
+            <input type="hidden" name="state">
           </div>
           <div class="field">
             <label for="city">Endereço</label>
-            <select name="" id="" disabled>
+            <select name="city" disabled>
               <option value="">Selecione o cidade</option>
             </select>
           </div>
@@ -72,6 +74,8 @@
     </form>
 
   </div>
+
+  <script src="./scripts/create-point.js"></script>
   
 </body>
 </html>
