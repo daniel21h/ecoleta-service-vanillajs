@@ -40,6 +40,10 @@
   font-weight: 700;
 }
 
+#page-home header a:hover {
+  opacity: 0.7;
+}
+
 #page-home header a span {
   background-image: url('../../assets/icons/log-in.svg');
 
