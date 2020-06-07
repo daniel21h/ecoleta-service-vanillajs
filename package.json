@@ -1,0 +1,24 @@
+{
+  "name": "basicVersion",
+  "version": "1.0.0",
+  "description": "Ecoleta is a garbage collection service developed during the rocketseat Next Level Week.",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniel21h/ecoleta-service-vanillajs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/daniel21h/ecoleta-service-vanillajs/issues"
+  },
+  "homepage": "https://github.com/daniel21h/ecoleta-service-vanillajs#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
