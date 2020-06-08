@@ -91,3 +91,16 @@
 #modal form button:hover {
   opacity: 0.9;
 }
+
+/* MODAL-SUCESS in PAGE-CREATE-POINT */
+#modal.sucess .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#modal.sucess .content h1 {
+  color: #fff;
+  margin-top: 32px;
+}

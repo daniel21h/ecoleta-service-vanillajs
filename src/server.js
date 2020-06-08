@@ -6,6 +6,9 @@ const server = express()
 // Config public files
 server.use(express.static('public'))
 
+// Enable the use of request.body in the application
+server.use(express.urlencoded({ extended: true }))
+
 // Using template engine
 const nunjucks = require('nunjucks')
 nunjucks.configure('src/views', {
@@ -18,7 +21,46 @@ server.get('/', (request, response) => {
 })
 
 server.get('/create-point', (request, response) => {
+
   return response.render('create-point.html')
+})
+
+server.post('/save-point', (request, response) => {
+  // Insert data in the database
+  const query = `
+    INSERT INTO places (
+      image,
+      name,
+      address,
+      address2,
+      state,
+      city,
+      items
+    ) VALUES (?,?,?,?,?,?,?);
+  `
+
+  const values = [
+    request.body.image,
+    request.body.name,
+    request.body.address,
+    request.body.address2,
+    request.body.state,
+    request.body.city,
+    request.body.items,
+  ]
+
+  function afterInsertData(err) {
+    if (err) {
+      return response.send('Erro no cadastro!')
+    }
+
+    console.log('Cadastro realizado com sucesso!')
+    console.log(this)
+
+    return response.render('create-point.html', { saved: true })
+  }
+
+  db.run(query, values, afterInsertData)
 })
 
 server.get('/search-results', (request, response) => {
@@ -28,8 +70,10 @@ server.get('/search-results', (request, response) => {
       return console.log(err)
     }
 
+    const total = rows.length
+
     // Show the html page with the data from the database
-    return response.render('search-results.html', { places: rows })
+    return response.render('search-results.html', { places: rows, total })
   })
 
 })

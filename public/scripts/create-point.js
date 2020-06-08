@@ -47,7 +47,7 @@ document
 
 
 
-// CLASS SELECTEDFROM COLLECTS ITEMS
+// CLASS SELECTED FROM COLLECTS ITEMS
 const itemsToCollect = document.querySelectorAll('.items-grid li')
 
 for (const item of itemsToCollect) {
