@@ -1,4 +1,5 @@
 const express = require('express')
+const db = require('./database/db')
 
 const server = express()
 
@@ -21,7 +22,16 @@ server.get('/create-point', (request, response) => {
 })
 
 server.get('/search-results', (request, response) => {
-  return response.render('search-results.html')
+  // Get data in the database
+  db.all(`SELECT name FROM places`, function(err, rows) {
+    if (err) {
+      return console.log(err)
+    }
+
+    // Show the html page with the data from the database
+    return response.render('search-results.html', { places: rows })
+  })
+
 })
 
 server.listen(3333, () => {
