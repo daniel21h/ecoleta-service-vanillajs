@@ -103,12 +103,15 @@ main .card a {
 body::after {
   content: '';
   position: fixed;
+  /* position: absolute; */
   background-color: #0e0a14cc;
 
   top: 260px;
+  /* top: 0; */
   right: 0;
   left: 0;
   bottom: 0;
+  /* height: 16rem; */
   z-index: -1;
   border-radius: 28px 28px 0 0;
 
